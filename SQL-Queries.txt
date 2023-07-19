@@ -1,0 +1,42 @@
+CREATE DATABASE movicatalog;
+Drop database movicatalog;
+create database moviecatalog;
+USE moviecatalog;
+CREATE TABLE movierating (userId int, 
+    movieId int,
+    rating int,
+    updatedby varchar(200),
+    updatedon datetime
+);
+SELECT * From movierating;
+ALTER TABLE movierating MODIFY COLUMN movieId varchar(222); 
+desc movierating;
+INSERT INTO movierating (userId , 
+    movieId ,
+    rating ,
+    updatedby ,
+    updatedon ) VALUES (222,  'movieseven', 3, 'sathya', SYSDATE()); 
+    commit;
+    CREATE TABLE movieinfo ( 
+    movieId int,
+    moviename varchar(200),
+    moviedesc varchar(200),
+    updatedby varchar(200),
+    updatedon datetime
+);
+ALTER TABLE movieinfo MODIFY COLUMN movieId varchar(222); 
+commit;
+desc movieinfo;
+
+INSERT INTO movieinfo (
+    movieId ,
+    moviename ,
+    moviedesc,
+    updatedby ,
+    updatedon ) VALUES ('movietwo',  'MI5','Tomcruise movie', 'dhinesh', SYSDATE()); 
+    commit;
+SELECT * From movieinfo;
+
+
+
+    
